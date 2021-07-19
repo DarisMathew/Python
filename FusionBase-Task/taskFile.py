@@ -38,7 +38,6 @@ while True:
     newCount = len(zipURLList)
 
     if oldCount > 0 and newCount > oldCount :
-#         print("isUpdated")
         with urlopen(zipURLList[0]) as zipresp:
             with ZipFile(BytesIO(zipresp.read())) as zfile:
                 zfile.extractall(currentDir)   
